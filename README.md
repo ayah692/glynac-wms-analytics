@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧭 Glynac WMS Analytics Dashboard
 
-## Getting Started
+A modern **Wealth Management System (WMS) analytics suite** built with **Next.js 16**, **React 19**, **Tailwind CSS 4**, and **Recharts**.  
+It provides interactive dashboards for **Advisors**, **Operations**, and **Compliance** teams — designed for real-time insights and future backend integration.
 
-First, run the development server:
+---
+
+## 📊 Features
+
+| Area | Highlights |
+|------|-------------|
+| **Advisor Dashboard** | Portfolio summary, top clients list, performance insights chart |
+| **Operations Dashboard** | Process metrics line chart, resource utilization bars, system health uptime area |
+| **Compliance Dashboard** | Regulatory status table, risk assessment pie chart, audit tracking list |
+| **Landing Page** | `/` route with clean cards linking to all dashboards |
+| **Reusable Layout** | Shared `DashboardLayout` component with consistent header & styling |
+| **Responsive Design** | Fully optimized for mobile, tablet, and desktop |
+| **Charts** | Built with [`recharts`](https://recharts.org/en-US) for smooth animations and tooltips |
+
+---
+
+## 🧱 Tech Stack
+
+- **Framework:** [Next.js 16 (App Router)](https://nextjs.org)
+- **Language:** TypeScript + React 19
+- **Styling:** Tailwind CSS 4
+- **Charts:** Recharts
+- **Icons:** Lucide React
+
+---
+
+## 📂 Project Structure
+
+app/
+├─ page.tsx → Landing page with dashboard links
+└─ dashboard/
+├─ advisor/ → Advisor Dashboard
+├─ operations/ → Operations Dashboard
+└─ compliance/ → Compliance Dashboard
+components/
+├─ layout/ → Shared DashboardLayout
+├─ ui/ → Card and base UI elements
+└─ dashboard/ → Section components per dashboard
+
+yaml
+Copy code
+
+---
+
+## 🚀 Getting Started
 
 ```bash
+# Clone repository
+git clone https://github.com/ayah692/glynac-wms-analytics.git
+cd glynac-wms-analytics
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Then open http://localhost:3000 in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🧭 Available Routes
+Route	Description
+/	Landing page with links to dashboards
+/dashboard/advisor	Advisor dashboard (portfolio & clients)
+/dashboard/operations	Operations dashboard (metrics & system health)
+/dashboard/compliance	Compliance dashboard (regulatory & audit)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🧑‍💻 Development Notes
+All dashboards use realistic mock data to simulate backend-ready structures.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The project follows a modular structure — each dashboard is a self-contained page with its own sub-components.
 
-## Learn More
+Future improvements:
 
-To learn more about Next.js, take a look at the following resources:
+Connect to real API/backend for live data.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Add authentication and user roles.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deploy on Vercel.
